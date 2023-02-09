@@ -75,6 +75,21 @@ do
 	fi
 done < <(ls * -d)
 '
+: ' select, switch-case, break loop
 
+select anime in Naruto Bleach 'One Piece' Pokemon 'Dragon Ball Z'
+do
+  case $anime in
+  Naruto)
+    echo Good choice!;;
+  Pokemon)
+    echo Two piece is better;;
+  'Dragon Ball Z')
+    break;;
+  *)
+    echo hahaha;;
+    esac
+done
+'
 
- echo Done program
+echo Done program
